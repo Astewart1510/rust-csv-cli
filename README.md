@@ -1,6 +1,7 @@
 # CSV Manager CLI
 
 The **CSV Manager CLI** is a command-line tool for managing CSV files. It allows you to perform various operations on CSV files, such as displaying, paginating, deleting, updating, and creating new CSV files. This tool is designed to provide a simple and convenient way to work with CSV data from the command line.
+The application maintains the size of the csv data file by inserting default values upon deletion of a field. The default value is an "_".
 
 ## Features
 
