@@ -3,7 +3,7 @@ mod custom_error;
 mod input_handler;
 
 use core::time;
-use std::thread::sleep;
+use std::{env, thread::sleep};
 
 use csv_data::CSVData;
 use custom_error::CSVError;
@@ -11,8 +11,7 @@ use input_handler::{
     delete_cell_in_data, modify_cell_in_data, paginate_data, read_menu_selection, save_to_csv_file,
 };
 
-const CSVFILE: &str = "../testdata.csv";
-
+static CSVFILE: &str = "testdata.csv";
 enum MainMenu {
     DisplayFile,
     PaginateFile,
@@ -46,7 +45,11 @@ impl MainMenu {
 }
 
 fn run_prog() -> Result<(), CSVError> {
-    let mut data = CSVData::read_csv(CSVFILE)?;
+    // Get the current working directory
+    let current_dir = env::current_dir()?;
+    // Construct the full file path
+    let file_path = current_dir.join(CSVFILE);
+    let mut data = CSVData::read_csv(&file_path.to_string_lossy())?;
 
     loop {
         MainMenu::show_menu();

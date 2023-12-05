@@ -30,6 +30,18 @@ Once you have Rust and Cargo installed, follow these steps to install and run th
    cd eotlabs
    ```
 
+3. Build project:
+
+   ```bash
+   cargo build
+   ```
+
+4. Run project:
+
+   ```bash
+   cargo run
+   ```
+
 ## Usage
 
 After running the CLI, you will be presented with a menu that allows you to select various operations. Here's a brief overview of the available operations:
