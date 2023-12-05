@@ -48,5 +48,5 @@ Example:
 5. Create New CSV File
 q. Quit
 
-Please enter your selection using the corresponding menu number only or enter \"q\" or \"quit\" to exit:
+Please enter your selection using the corresponding menu number only or enter "q" or "quit" to exit:
 ```
