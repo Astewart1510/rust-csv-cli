@@ -21,13 +21,13 @@ Once you have Rust and Cargo installed, follow these steps to install and run th
 
    ```bash
    git clone https://github.com/your_username/csv-manager-cli.git
-  ```
+   ```
 
 2. Change to the project directory:
 
    ```bash
    cd eotlabs
-  ```
+   ```
 
 
 ## Usage
@@ -48,5 +48,5 @@ Example:
 5. Create New CSV File
 q. Quit
 
-Please enter your selection using the corresponding menu number or 'q' to quit:
+Please enter your selection using the corresponding menu number only:
 ```
