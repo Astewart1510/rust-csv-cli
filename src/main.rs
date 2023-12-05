@@ -19,6 +19,7 @@ enum MainMenu {
     DeleteField,
     UpdateField,
     WriteFile,
+    Quit,
 }
 
 impl MainMenu {
@@ -29,6 +30,7 @@ impl MainMenu {
             "3" => Some(Self::DeleteField),
             "4" => Some(Self::UpdateField),
             "5" => Some(Self::WriteFile),
+            "q" | "quit" => Some(Self::Quit),
             _ => None,
         }
     }
@@ -39,7 +41,7 @@ impl MainMenu {
         println!("3. Delete Field");
         println!("4. Update Field");
         println!("5. Create New CSV File\n");
-        println!("Please enter your selection using the corresponding menu number only:");
+        println!("Please enter your selection using the corresponding menu number only or enter \"q\" or \"quit\" to exit:");
     }
 }
 
@@ -82,8 +84,14 @@ fn run_prog() -> Result<(), CSVError> {
                 Ok(_) => (),
                 Err(e) => eprintln!("Error: {}", e),
             },
-            None => break,
-        };
+            Some(MainMenu::Quit) => {
+                println!("Exiting the program.");
+                break; // Exit the loop and program
+            }
+            None => {
+                println!("Unrecognized command. Please try again.");
+            }
+        }
     }
 
     Ok(())

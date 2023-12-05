@@ -29,7 +29,6 @@ Once you have Rust and Cargo installed, follow these steps to install and run th
    cd eotlabs
    ```
 
-
 ## Usage
 
 After running the CLI, you will be presented with a menu that allows you to select various operations. Here's a brief overview of the available operations:
@@ -38,6 +37,7 @@ Enter the corresponding number to perform the desired operation.
 Follow the prompts to provide input when necessary.
 
 Example:
+
 ```bash
  == CSV Manager ==
 
@@ -48,5 +48,5 @@ Example:
 5. Create New CSV File
 q. Quit
 
-Please enter your selection using the corresponding menu number only:
+Please enter your selection using the corresponding menu number only or enter \"q\" or \"quit\" to exit:
 ```
